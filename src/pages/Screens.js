@@ -1,6 +1,5 @@
 import { Text, View } from 'react-native';
 
-// 1. Reusable Layout Component (Background & Padding)
 const ScreenLayout = ({ title, children }) => (
   <View className="flex-1 bg-black pt-12 px-4">
     <Text className="text-emerald-400 text-3xl font-bold mb-6">{title}</Text>
@@ -10,8 +9,7 @@ const ScreenLayout = ({ title, children }) => (
   </View>
 );
 
-// 2. The 5 Individual Screens
-export const TrackerScreen = () => <ScreenLayout title="Tracker" />;
+// NOTE: I removed TrackerScreen from here because it has its own file now.
 export const ActivityScreen = () => <ScreenLayout title="Activity" />;
 export const StatsScreen = () => <ScreenLayout title="Stats" />;
 export const ExercisesScreen = () => <ScreenLayout title="Exercises" />;

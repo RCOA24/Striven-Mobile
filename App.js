@@ -1,23 +1,22 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
+import { Activity, Dumbbell, Footprints, TrendingUp, User } from 'lucide-react-native';
 import 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-// FIX: Standard import (Works with version 0.460.0)
-import { Activity, Dumbbell, Footprints, TrendingUp, User } from 'lucide-react-native';
+// 1. IMPORT TRACKER FROM ITS OWN FILE (Default Import)
+import TrackerScreen from './src/pages/TrackerScreen';
 
-// Import your screens
+// 2. IMPORT OTHERS FROM SCREENS.JS (Named Imports)
 import {
     ActivityScreen,
     ExercisesScreen,
     ProfileScreen,
-    StatsScreen,
-    TrackerScreen
+    StatsScreen
 } from './src/pages/Screens';
 
 const Tab = createBottomTabNavigator();
-
 export default function App() {
   return (
     <SafeAreaProvider>
